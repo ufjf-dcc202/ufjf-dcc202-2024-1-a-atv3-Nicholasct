@@ -55,22 +55,22 @@ test.describe("index.html", () => {
 
   test('a primeira seção deve ter um título', async ({ page }) => {
     await page.goto(`file://${process.cwd()}/index.html`);
-    await expect(page.locator("main > section:nth-child(3) > h2")).toHaveText(/Naturalidade/);
+    await expect(page.locator("main > section:nth-child(1) > h2")).toHaveText(/Naturalidade/);
   });
 
   test('a primeira seção deve ter um parágrafo', async ({ page }) => {
     await page.goto(`file://${process.cwd()}/index.html`);
-    await expect(page.locator("main > section:nth-child(3) > p")).toBeVisible();
+    await expect(page.locator("main > section:nth-child(1) > p")).toBeVisible();
   });
 
   test('a segunda seção deve ter um título', async ({ page }) => {
     await page.goto(`file://${process.cwd()}/index.html`);
-    await expect(page.locator("main > section:nth-child(4) > h2")).toHaveText("O que eu gosto de fazer?");
+    await expect(page.locator("main > section:nth-child(2) > h2")).toHaveText("O que eu gosto de fazer?");
   });
 
   test('a segunda seção deve ter um parágrafo', async ({ page }) => {
     await page.goto(`file://${process.cwd()}/index.html`);
-    await expect(page.locator("main > section:nth-child(4) > p")).toBeVisible();
+    await expect(page.locator("main > section:nth-child(2) > p")).toBeVisible();
   });
 
 });
